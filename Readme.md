@@ -57,7 +57,7 @@ cd weather-app
 3. Replace the API key in `newproject.js`:
 
 ```javascript
-const apiKey = "YOUR_API_KEY";
+const apiKey = "4b982d3aa7c3bbf9f6c6c0f3eeb931f7";
 ```
 
 ## 🌐 API Used
