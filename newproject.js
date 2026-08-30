@@ -19,7 +19,7 @@ async function checkWeather(city){
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
-        // Added the missing [0] index back so it tracks the API properly
+        // Fixed data tracking array index [0] to keep the button from crashing
         if(data.weather[0].main == "Clouds"){
             weather_icon.src = "clouds.png";
         }
@@ -44,6 +44,3 @@ async function checkWeather(city){
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
 })
-
-
-    
