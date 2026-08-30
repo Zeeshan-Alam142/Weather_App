@@ -1,5 +1,5 @@
 const apiKey="4b982d3aa7c3bbf9f6c6c0f3eeb931f7";
-const apiUrl="https://openweathermap.org";
+const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
@@ -19,7 +19,7 @@ async function checkWeather(city){
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
-        // Fixed data tracking array index [0] to keep the script from crashing
+        // Fixed image paths: removed "images/" prefix to match your root folder
         if(data.weather[0].main == "Clouds"){
             weather_icon.src = "clouds.png";
         }
@@ -44,3 +44,4 @@ async function checkWeather(city){
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
 })
+
